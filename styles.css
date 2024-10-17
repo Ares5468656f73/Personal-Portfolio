@@ -1,0 +1,123 @@
+/* Estilos basados en Tokyo Night Storm */
+body {
+    background-color: #24283b; /* Fondo oscuro del tema */
+    color: #c0caf5; /* Color claro del texto */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    align-items: center;
+    background-color: #1a1b26; /* Fondo del contenedor */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px; /* Espacio inferior para desplegable */
+}
+
+/* Contenedor de la imagen */
+.image-container {
+    margin-right: 20px;
+}
+
+.ares-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%; /* Imagen redondeada */
+    border: 3px solid #7aa2f7; /* Borde azul claro */
+}
+
+/* Contenedor de texto */
+.text-container h1 {
+    font-size: 2.5rem;
+    color: #7aa2f7; /* Color del nombre */
+    margin: 0;
+}
+
+/* Botón para desplegar la información */
+#toggle-info, #toggle-projects {
+    margin-top: 10px;
+    font-family: 'CaskaydiaCove Nerd Font', monospace;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #7aa2f7;
+    color: #1a1b26;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#toggle-info:hover, #toggle-projects:hover {
+    background-color: #9ece6a;
+}
+
+/* Estilo para la sección desplegable */
+#about-me {
+    background-color: #1a1b26;
+    font-family: monospace;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 600px;
+    text-align: left;
+    color: #c0caf5;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, padding 0.5s ease;
+    margin-bottom: 10px; /* Evita superposición */
+}
+
+#projects {
+    background-color: #1a1b26;
+    border-radius: 10px;
+    width: 600px;
+    text-align: left;
+    color: #c0caf5;
+    max-height: 0; /* Oculto inicialmente */
+    overflow: hidden; /* Esconde el contenido que sobrepase */
+    transition: max-height 0.5s ease, padding 0.5s ease; /* Ajusta el tiempo de animación */
+    margin-top: 10px;
+    padding: 0 20px; /* Ajusta el padding según el diseño */
+}
+
+
+/* Ocultar la sección inicialmente */
+.hidden {
+    max-height: 0;
+    padding: 0 20px;
+}
+
+#about-me h2, #projects h3 {
+    color: #7aa2f7;
+    font-family: CaskaydiaCove Nerd Font;
+}
+
+#about-me p, #projects p {
+    font-family: monospace;
+    font-size: 15px;
+    margin-top: 5px;
+    color: #c0caf5;
+}
+
+.bm0-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%; 
+    float: left; 
+    margin-right: 10px; 
+}
