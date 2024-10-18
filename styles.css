@@ -18,12 +18,13 @@ h1 {
 /* Contenedor principal */
 .container {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     background-color: #1a1b26; /* Fondo del contenedor */
     padding: 20px;
+    margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px; /* Espacio inferior para desplegable */
 }
 
 /* Contenedor de la imagen */
@@ -72,7 +73,7 @@ h1 {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 600px;
+    width: 315px;
     text-align: left;
     color: #c0caf5;
     max-height: 0;
@@ -83,41 +84,48 @@ h1 {
 
 #projects {
     background-color: #1a1b26;
-    border-radius: 10px;
-    width: 600px;
-    text-align: left;
-    color: #c0caf5;
-    max-height: 0; /* Oculto inicialmente */
-    overflow: hidden; /* Esconde el contenido que sobrepase */
-    transition: max-height 0.5s ease, padding 0.5s ease; /* Ajusta el tiempo de animación */
-    margin-top: 10px;
-    padding: 0 20px; /* Ajusta el padding según el diseño */
-}
-
-
-/* Ocultar la sección inicialmente */
-.hidden {
-    max-height: 0;
+    font-family: monospace;
+    font-weight: bold;
     padding: 0 20px;
+    width: 600px;
+    color: #c0caf5;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, padding 0.5s ease;
 }
 
-#about-me h2, #projects h3 {
+
+.hidden {
+    max-height: 0; /* Asegúrate de que sea 0 para ocultar completamente */
+    padding: 0;    /* Sin relleno al estar oculto */
+    overflow: hidden; /* Asegúrate de que no haya desbordamiento */
+    transition: max-height 0.5s ease, padding 0.5s ease; /* Añade transición para suavidad */
+}
+
+
+#about-me h2 {
     color: #7aa2f7;
     font-family: CaskaydiaCove Nerd Font;
 }
 
-#about-me p, #projects p {
+#about-me p {
     font-family: monospace;
+    text-align: left;
     font-size: 15px;
     margin-top: 5px;
     color: #c0caf5;
 }
 
-.bm0-image {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%; 
-    float: left; 
-    margin-right: 10px; 
+#projects p {
+    font-family: monospace;
+    text-align: left;
+    font-size: 15px;
+    color: #c0caf5;
+}
+
+#projects h2 {
+    font-size: 30px;
+    color: #9ece6a;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
 }
